@@ -1,0 +1,21 @@
+# Copyright (C) 2023 flat latte
+msgid ""
+msgstr ""
+"Project-Id-Version: Flat Latte\n"
+"POT-Creation-Date: 2023-11-15 12:00-0500\n"
+"PO-Revision-Date: 2023-11-15 12:00-0500\n"
+"Last-Translator: flat latte <hello@flatlatte.com>\n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: inc/customizer.php:5
+msgid "Hero Section"
+msgstr ""
+
+#: inc/customizer.php:10
+msgid "Hero Title"
+msgstr ""
