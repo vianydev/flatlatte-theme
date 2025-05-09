@@ -13,6 +13,9 @@ get_header();
         <h1 data-aos="fade-up" data-aos-delay="300">
           <?php echo get_theme_mod('hero_title', 'Tienes algo único que merece ser visto.'); ?>
         </h1>
+        <p data-aos="fade-up" data-aos-delay="300" class="col-10 opacity-25">
+          <?php echo get_theme_mod('hero_text', 'Sitios web para creativos, emprendedores y freelancers'); ?>
+        </p>
       </div>
     </div>
   </div>
@@ -21,126 +24,82 @@ get_header();
 <!-- About Section -->
 <section id="about" class="about section">
   <div class="container">
-    <div class="row justify-content-start">
-      <div class="col-lg-7 mb-5 mb-lg-0 order-2 order-lg-1 d-flex flex-column">
-        <h1 class="lh-sm my-lg-4" data-aos="fade-up"><?php echo get_theme_mod('about_title', 'Sigue creando'); ?></h1>
-        <div class="col-lg-11 mb-2" data-aos="fade-up">
-          <?php echo wpautop(get_theme_mod('about_content', 'Músicos, fotógrafos, diseñadores, escritores... tenemos algo en común: <b>¡nos encanta crear!.</b>')); ?>
-        </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-10 mb-5 mb-lg-0 order-2 d-flex flex-column text-center">
+        <h1 class="lh-sm my-lg-4" data-aos="fade-up"><?php echo get_theme_mod('about_title', 'Muestra al mundo lo que haces'); ?></h1>
 
         <div class="col-lg-11 mb-4" data-aos="fade-up">
-          <?php echo wpautop(get_theme_mod('about_content', 'Entendemos lo que es pasar horas lidiando con lo técnico en vez de hacer lo que disfrutas. Por eso, ayudamos a emprendedores como tú a construir una presencia digital auténtica y libre de ruido, para que conectes con tu audiencia y tu proyecto crezca sin complicaciones.')); ?>
+          <?php echo wpautop(get_theme_mod('about_content', 'Creamos sitios web limpios y  bien pensados, sin secciones innesarias, para que tu proyecto conecte con tu audiencia, sin complicarte con detalles técnicos.')); ?>
         </div>
 
-        <p class="mt-5" data-aos="fade-up">
-          <a href="<?php echo esc_url(home_url('/contacto')); ?>"
-            class="btn btn-get-started">
-            <?php echo get_theme_mod('about_button_text', 'Hagamos equipo'); ?>
-          </a>
-        </p>
-      </div>
-
-      <div class="col-lg-5 imagen-about mb-5 mb-lg-0 order-1 order-lg-2"
-        style="background-image: url('<?php echo esc_url(get_theme_mod('about_image', get_template_directory_uri() . '/assets/img/img_v_3.JPG')); ?>')">
       </div>
     </div>
-  </div>
-</section>
 
-<!-- Services Section -->
-<section id="services" class="services section">
-  <div class="container">
-    <div class="row align-items-start justify-content-between">
-      <div class="col-lg-8 order-lg-1">
-        <h1 class="lh-sm my-lg-4" data-aos="fade-up">
-          Un sorbo de lo que hacemos:
-        </h1>
-      </div>
+    <div class="row g-2">
 
-      <div class="col-lg-12 order-lg-2">
-        <div class="container">
-          <div class="row align-items-center" data-aos="fade-up">
-            <!-- Imagen (ocupa 1 columna cuando hay 2 servicios) -->
-            <div class="col-12 col-sm-12 col-lg-4 my-2 imagen-services"
-              style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/img_v_1.JPG')"
-              data-aos="fade-up">
-            </div>
-
-            <!-- Servicio 1 -->
-            <div class="col-12 col-sm-12 col-lg-4 my-2">
-              <div class="services-item" data-aos="fade-up" data-aos-delay="300">
-                <div class="services-icon">
-                  <i class="bi bi-window"></i>
-                </div>
-                <div>
-                  <h3 class="fw-bold mb-1">Sitios Web</h3>
-                  <p>
-                    Creamos sitios enfocados en destacar tu trabajo con un diseño limpio y eliminando secciones
-                    innecesarias.
-                  </p>
-                  <p class="fst-italic">Ideal para: </p>
-                  <div class="services-item p-0" data-aos="fade-up" data-aos-delay="300">
-                    <div class="d-flex">
-                      <i class="bi bi-check fs-5 me-1"></i>
-                      <p class="my-0">Emprendedores creativos</p>
-                    </div>
-                    <div class="d-flex">
-                      <i class="bi bi-check fs-5 me-1"></i>
-                      <p class="my-0">Empresas</p>
-                    </div>
-                    <div class="d-flex">
-                      <i class="bi bi-check fs-5 me-1"></i>
-                      <p class="my-0">Artistas y bandas</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="mt-5">
-                  <a class="btn btn-get-started" href="https://wa.me/529223400366?text=Hola,%20me%20gustaría%20un%20sitio%20web.%20¿Podrías%20ayudarme?" target="_blank"  data-aos="fade-up">
-                    Empezar ahora
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Servicio 2 -->
-            <div class="col-12 col-sm-12 col-lg-4 my-2">
-              <div class="services-item" data-aos="fade-up" data-aos-delay="300">
-                <div class="services-icon">
-                  <i class="bi bi-plus-square"></i>
-                </div>
-                <div>
-                  <h3 class="fw-bold mb-1">Socio Flat Latte</h3>
-                  <p>
-                    Agrega valor a tus clientes ofreciendo sitios web sin preocuparte de lo técnico.
-                  </p>
-                  <p class="fst-italic">Ideal para: </p>
-                  <div class="services-item p-0" data-aos="fade-up" data-aos-delay="300">
-                    <div class="d-flex">
-                      <i class="bi bi-check fs-5 me-1"></i>
-                      <p class="my-0">Diseñadores gráficos</p>
-                    </div>
-                    <div class="d-flex">
-                      <i class="bi bi-check fs-5 me-1"></i>
-                      <p class="my-0">Fotógrafos</p>
-                    </div>
-                    <div class="d-flex">
-                      <i class="bi bi-check fs-5 me-1"></i>
-                      <p class="my-0">Agencias de marketing</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-12 mt-5">
-                  <a class="btn btn-get-started" href="https://wa.me/529223400366?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20ser%20socio%20Flat%20Latte.%20¿Me%20puedes%20dar%20información?" target="_blank"  data-aos="fade-up">
-                    Empezar ahora
-                  </a>
-                </div>
-              </div>
-            </div>
-
-          </div>
+      <div class="col-md-6 col-lg-4 about-box text-center p-3" data-aos="fade-up">
+        <div class="about-icon d-flex justify-content-center align-items-center">
+          <i class="bi bi-globe"></i>
         </div>
+        <h5 class="mt-3">Dominio y Alojamiento incluidos</h5>
+        <p class="">Nosotros lo conectamos todo. Tú solo eliges el nombre.</p>
       </div>
+  
+      <div class="col-md-6 col-lg-4 about-box text-center p-3" data-aos="fade-up">
+        <div class="about-icon d-flex justify-content-center align-items-center">
+          <i class="bi bi-phone"></i>
+        </div>
+        <h5 class="mt-3">Diseño móvil optimizado</h5>
+        <p class="">Adaptado a cualquier celular, tablet o computadora.</p>
+      </div>
+  
+      <div class="col-md-6 col-lg-4 about-box text-center p-3" data-aos="fade-up">
+        <div class="about-icon d-flex justify-content-center align-items-center">
+          <i class="bi bi-lightning"></i>
+        </div>
+        <h5 class="mt-3">Rápido y listo para Google</h5>
+        <p class="">Listo para ser encontrado y no hacer esperar.</p>
+      </div>
+
+      <div class="col-md-6 col-lg-4 about-box text-center p-3" data-aos="fade-up">
+        <div class="about-icon d-flex justify-content-center align-items-center">
+          <i class="bi bi-diagram-3"></i>
+        </div>
+        <h5 class="mt-3">Redes sociales integradas</h5>
+        <p class="">Conecta tus canales fácilmente o enlace directo a WhatsApp.</p>
+      </div>
+  
+      <div class="col-md-6 col-lg-4 about-box text-center p-3" data-aos="fade-up">
+        <div class="about-icon d-flex justify-content-center align-items-center">
+          <i class="bi bi-puzzle"></i>
+        </div>
+        <h5 class="mt-3">Secciones personalizadas</h5>
+        <p class="">Servicios, portafolio, tienda, contacto… Lo que necesites.</p>
+      </div>
+  
+      <div class="col-md-6 col-lg-4 about-box text-center p-3" data-aos="fade-up">
+        <div class="about-icon d-flex justify-content-center align-items-center">
+          <i class="bi bi-pencil-square"></i>
+        </div>
+        <h5 class="mt-3">Autogestionable</h5>
+        <p class="">Podrás editar los textos cuando quieras.</p>
+      </div>
+
     </div>
+
+    <div class="row text-center">
+      <p class="mt-5" data-aos="fade-up">
+        <a href="<?php echo esc_url(home_url('/contacto')); ?>"
+          class="btn btn-get-started">
+          <?php echo get_theme_mod('about_button_text', 'Quiero mi sitio web'); ?>
+        </a>
+      </p>
+    </div>
+
+      <!-- <div class="col-lg-5 imagen-about mb-5 mb-lg-0 order-1 order-lg-2">
+        <img class="w-50" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/img_v_3.JPG'); ?>" alt="">
+      </div> -->
+
   </div>
 </section>
 
@@ -239,7 +198,7 @@ get_header();
     <div class="row align-items-center justify-content-center">
       <div class="section-title text-center">
         <div class="col-lg-12">
-          <h1 class="" data-aos="fade-up">¿Y ahora qué sigue?</h1>
+          <h1 class="" data-aos="fade-up">Así de simple es tener tu sitio web</h1>
         </div>
       </div>
 
@@ -252,7 +211,7 @@ get_header();
             <div class="service-contents">
               <p class="fs-5 fw-semibold mb-1">Hablamos</p>
               <p>
-                Agendamos una videollamada para hablar de los detalles de tu proyecto y aclares todas tus dudas.
+                Agendamos una llamada para hablar de tu proyecto y aclares todas tus dudas.
               </p>
             </div>
           </div>
@@ -276,7 +235,7 @@ get_header();
             <div class="service-contents">
               <p class="fs-5 fw-semibold mb-1">Lanzamos</p>
               <p>
-                Ponemos tu sitio en línea, listo para mostrar lo que haces.
+                Ponemos tu sitio en línea, listo para mostrar. además te garantizamos soporte técnicos claro y cercano.
               </p>
             </div>
           </div>
@@ -292,6 +251,61 @@ get_header();
   </div>
 </section>
 <!-- /How it works Section -->
+
+<!-- Services Section -->
+<section id="services" class="services section">
+  <div class="container">
+    <div class="row align-items-start justify-content-between">
+      <div class="col-lg-12 order-lg-2">
+        <div class="container">
+          <div class="row align-items-center" data-aos="fade-up">
+            <!-- Imagen (ocupa 1 columna cuando hay 2 servicios) -->
+            <div class="col-12 col-sm-12 col-lg-4 my-2 imagen-services"
+              style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/img_v_1.JPG')"
+              data-aos="fade-up">
+            </div>
+
+            <!-- Servicio 1 -->
+            <div class="col col-sm-12 col-lg-8 my-2">
+              <div class="services-item" data-aos="fade-up" data-aos-delay="300">
+                <h1 class="lh-sm my-lg-4" data-aos="fade-up">
+                ¿Eres freelancer y quieres ofrecer sitios web?
+                </h1>
+                <div>
+                  <p>
+                    Conviértete en socio flat latte y ofrece sitios profesionales sin preocuparte del desarrollo.
+                  </p>
+                  <p class="fst-italic">Ideal para: </p>
+                  <div class="services-item p-0" data-aos="fade-up" data-aos-delay="300">
+                    <div class="d-flex">
+                      <i class="bi bi-check fs-5 me-1"></i>
+                      <p class="my-0">Diseñadores gráficos</p>
+                    </div>
+                    <div class="d-flex">
+                      <i class="bi bi-check fs-5 me-1"></i>
+                      <p class="my-0">Fotógrafos</p>
+                    </div>
+                    <div class="d-flex">
+                      <i class="bi bi-check fs-5 me-1"></i>
+                      <p class="my-0">Agencias de marketing</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12 mt-5">
+                  <a class="btn btn-get-started" href="<?php echo esc_url(home_url('/socio')); ?>" target="_blank"  data-aos="fade-up">
+                    Conviértete en socio
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FAQ Section -->
 <section id="faq" class="faq section">
   <div class="container section-title" data-aos="fade-up">
@@ -308,19 +322,18 @@ get_header();
                     $faq_question = get_theme_mod("faq_{$i}_question");
                     $faq_answer = get_theme_mod("faq_{$i}_answer");
                     
-                    if ($faq_question || $i <= 8) {
+                    if ($faq_question || $i <= 7) {
                         echo '<div class="accordion-item">';
                         echo '<p class="mb-0">';
                         echo '<button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-faq-' . $i . '">';
                         echo $faq_question ?: (
-                            $i == 1 ? '¿Qué tipo de sitios web hacen?' : 
-                            ($i == 3 ? '¿Puedo ofrecer sitios web a mis clientes sin saber programar?' : 
-                            ($i == 4 ? '¿Cuánto tiempo toma crear un sitio web?' : 
-                            ($i == 5 ? '¿Puedo vender mis productos o servicios en mi sitio?' : 
-                            ($i == 6 ? '¿Qué pasa si necesito cambios en el futuro?' : 
-                            ($i == 7 ? '¿Cuánto cuesta?' : 
-                            ($i == 8 ? '¿Es posible cambiar el diseño después de que el sitio esté en producción?' : 
-                            '¿El sitio web será totalmente compatible con dispositivos móviles?'))))))
+                            $i == 1 ? '¿Qué tipo de sitios web hacen?' :  
+                            ($i == 2 ? '¿Cuánto tiempo toma crear un sitio web?' : 
+                            ($i == 3 ? '¿Puedo vender mis productos o servicios en mi sitio?' : 
+                            ($i == 4 ? '¿Qué pasa si necesito cambios en el futuro?' : 
+                            ($i == 5 ? '¿Cuánto cuesta?' : 
+                            ($i == 6 ? '¿Es posible cambiar el diseño después de que el sitio esté en producción?' : 
+                            '¿El sitio web será totalmente compatible con dispositivos móviles?')))))
                         );
 
                         echo '</button></p>';
@@ -328,13 +341,12 @@ get_header();
                         echo '<div class="accordion-body">';
                         echo $faq_answer ?: (
                             $i == 1 ? 'Trabajamos principalmente con creativos, emprendedores y artistas, por lo que hacemos portafolios, tiendas en línea, blogs, sistemas de reservas, venta de cursos y más.' : 
-                            ($i == 3 ? 'Sí. Si eres diseñador o creativo y quieres sumar desarrollo web a tus servicios, nosotros nos encargamos de la parte técnica mientras tú te enfocas en el diseño y la relación con el cliente.' : 
-                            ($i == 4 ? 'Depende de la complejidad, pero en general, los proyectos básicos toman de 2 a 4 semanas.' : 
-                            ($i == 5 ? '¡Claro! Podemos integrar una tienda online o botones de pago según lo que necesites.' : 
-                            ($i == 6 ? 'Podemos hacerlos por ti o enseñarte a manejarlos con facilidad.' : 
-                            ($i == 7 ? 'El costo depende del tipo de sitio y funciones que necesites. Escríbenos y te ayudamos a elegir la mejor opción según tu presupuesto.' : 
-                            ($i == 8 ? 'Sí, ofrecemos revisiones para asegurar que el diseño final cumpla con tus expectativas o las de tu cliente. Cambios mayores pueden tener un costo adicional.' : 
-                            'Absolutamente. Todos nuestros sitios web están diseñados para ser completamente responsivos y adaptarse a cualquier dispositivo.'))))))
+                            ($i == 2 ? 'Depende de la complejidad, pero en general, los proyectos básicos toman de 2 a 4 semanas.' : 
+                            ($i == 3 ? '¡Claro! Podemos integrar una tienda online o botones de pago según lo que necesites.' : 
+                            ($i == 4 ? 'Podemos hacerlos por ti o enseñarte a manejarlos con facilidad.' : 
+                            ($i == 5 ? 'El costo depende del tipo de sitio y funciones que necesites. Escríbenos y te ayudamos a elegir la mejor opción según tu presupuesto.' : 
+                            ($i == 6 ? 'Sí, ofrecemos revisiones para asegurar que el diseño final cumpla con tus expectativas o las de tu cliente. Cambios mayores pueden tener un costo adicional.' : 
+                            'Absolutamente. Todos nuestros sitios web están diseñados para ser completamente responsivos y adaptarse a cualquier dispositivo.')))))
                         );
                         echo '</div></div></div>';
                     }
@@ -353,7 +365,7 @@ get_header();
     <div class="row align-items-center justify-content-center">
       <div class="col-lg-12">
         <h1 class="text-center" data-aos="fade-up">
-          <?php echo esc_html(get_theme_mod('we_love_title', 'En Flat Latte disfrutamos...')); ?>
+          <?php echo esc_html(get_theme_mod('we_love_title', 'En flat latte disfrutamos...')); ?>
         </h1>
       </div>
     </div>

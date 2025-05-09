@@ -89,7 +89,7 @@ if (!empty($links_data)) {
         Con Flat Latte, acompaño a emprendedores creativos que necesitan un sitio web sin preocuparse por lo técnico.
       </p>
       <p>
-      En nohome studio, donde hacemos música sincera, demostrando que los límites técnicos no son obstáculos cuando hay una historia genuina que contar..
+      En nohome studio, hacemos música sincera, demostrando que los límites técnicos no son obstáculos cuando hay una historia genuina que contar..
       </p>
       <p>
       Mi trabajo se trata de tomar lo que hay y sacarle lo máximo posible. De simplificar lo complejo sin vaciarlo de sentido. Si algo he aprendido en este camino, es que lo que vale la pena crear es lo que no necesita adornos... solo necesita existir.

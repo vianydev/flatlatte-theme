@@ -4,11 +4,10 @@ Theme URI: https://flatlatte.com
 Author: @okvianey
 Author URI: https://flatlatte.com
 Description: Tema WordPress para emprendedores creativos
-Version: 1.1
+Version: 2.0
 Text Domain: flatlatte
 */
 
-/* CSS V2 */
 :root {
   --default-font: "IBM Plex Mono", monospace, system-ui, -apple-system,
     "Segoe UI", "Helvetica Neue", sans-serif, "Apple Color Emoji",
@@ -146,7 +145,7 @@ h1 {
 .btn-nav:hover {
   border-bottom: 2px solid var(--accent-color);
   color: var(--accent-color);
-  padding: 10px 0px;
+  /* padding: 10px 0px; */
 }
 
 .btn-get-started {
@@ -223,13 +222,18 @@ h1 {
   border-bottom: 2px solid transparent;
   transition: 0.3s all ease-in-out;
   border-radius: 2px;
+  padding: 10px 0;
 }
 
 .footer a:hover {
   color: var(--accent-color);
   border-bottom: 2px solid var(--accent-color);
   border-radius: 2px;
-  padding: 0 10px;
+  padding: 10px;
+}
+
+.footer-nav {
+  font-size: .8rem;
 }
 
 .footer .copyright {
@@ -425,6 +429,11 @@ section,
   letter-spacing: -2px;
 }
 
+.hero .imagen-hero {
+  background-image: url("../img/flatlatte-v.jpg");
+  background-size: cover;
+}
+
 @media (min-width: 1199px) {
   .hero h1 {
     font-size: var(--font-size-fluid--display);
@@ -452,8 +461,36 @@ section,
 }
 
 .about .imagen-about {
-  background-image: url("../img/img_v_3.JPG");
+  background-image: url("../img/flatlatte-v.jpg");
+  /* background-image: url("../img/img_v_3.JPG"); */
   background-size: cover;
+  background-position: center;
+}
+
+
+.about .about-box {
+  /* border: 1px solid var(--default-color); */
+  text-decoration: none;
+  /* color: var(--default-color); */
+  /* background-color: var(--complete-white); */
+  /* box-shadow: 0 2px 8px rgba(0,0,0,0.1); */
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.about .about-icon {
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: var(--default-color);
+  /* background-color: var(--default-color); */
+  /* color: var(--contrast-color);
+  background-color: var(--default-color); */
+}
+
+.about .about-icon i {
+  font-size: 3rem;
 }
 
 @media (max-width: 991px) {
@@ -538,9 +575,42 @@ section,
 # Tabs Section
 --------------------------------------------------------------*/
 .tabs .tab-item {
-  border-top: var(--default-color) 1px solid;
-  border-bottom: var(--default-color) 1px solid;
+  border-left: var(--default-color) 1px solid;
+  border-right: var(--default-color) 1px solid;
   padding: 20px;
+}
+
+.tabs .tab-item:last-child,
+.tabs .tab-item:first-child  {
+border: none;
+}
+
+@media (max-width: 992px) {
+  .tabs .tab-item {
+    border-top: var(--default-color) 1px solid;
+    border-bottom: var(--default-color) 1px solid;
+    border-left: none;
+    border-right: none;
+    padding: 20px;
+  }
+  
+  .tabs .tab-item:last-child,
+  .tabs .tab-item:first-child  {
+  border: none;
+  }
+}
+
+.tabs .tab-number {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  text-align: center;
+}
+
+.tabs i span {
+  font-style: normal;
+  font-size: 1.2rem;
+  line-height: 1;
+  /* display: inline-block; */
 }
 
 .tabs .tabs-item.link {
