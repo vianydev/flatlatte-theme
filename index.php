@@ -75,8 +75,8 @@ get_header();
                     <?php
                     echo paginate_links(array(
                         'total' => $query->max_num_pages,
-                        'prev_text' => __('&laquo; Anterior'),
-                        'next_text' => __('Siguiente &raquo;'),
+                        'prev_text' => __('&laquo; Anterior', 'flat-latte'),
+                        'next_text' => __('Siguiente &raquo;', 'flat-latte'),
                         'mid_size' => 2
                     ));
                     ?>

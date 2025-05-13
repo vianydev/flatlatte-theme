@@ -11,7 +11,7 @@ get_header();
     <div class="row justify-content-start justify-content-lg-between align-items-end hero-title">
       <div class="col-lg-8 order-lg-1">
         <h1 data-aos="fade-up" data-aos-delay="300">
-          <?php echo get_theme_mod('hero_title', 'Gana más ofreciendo sitios web, sin tocar una línea de código.'); ?>
+          <?php echo esc_html( get_theme_mod('hero_title', 'Gana más ofreciendo sitios web, sin tocar una línea de código.') ); ?>
         </h1>
         <p data-aos="fade-up" data-aos-delay="400" class="pt-2">Nosotros hacemos el trabajo técnico. Tú entregas un sitio profesional y cobras más.</p>
       </div>
@@ -20,7 +20,7 @@ get_header();
         <p class="mt-5" data-aos="fade-up" data-aos-delay="600">
           <a href="<?php echo esc_url(home_url('/contacto-socio-flat-latte')); ?>"
             class="btn btn-get-started">
-            <?php echo get_theme_mod('about_button_text', 'Quiero ser socio'); ?>
+            <?php echo esc_html( get_theme_mod('about_button_text', 'Quiero ser socio') ); ?>
           </a>
         </p>
 
@@ -35,7 +35,7 @@ get_header();
   <div class="container">
     <div class="row justify-content-start">
       <div class="col-lg-7 mb-5 mb-lg-0 order-2 order-lg-1 d-flex flex-column">
-        <h1 class="lh-sm my-lg-4" data-aos="fade-up"><?php echo get_theme_mod('about_title', '¿Eres diseñador, fotógrafo, community manager o creativo freelance?'); ?></h1>
+        <h1 class="lh-sm my-lg-4" data-aos="fade-up"><?php echo esc_html( get_theme_mod('about_title', '¿Eres diseñador, fotógrafo, community manager o creativo freelance?') ); ?></h1>
         <div class="col-lg-11 mb-2" data-aos="fade-up">
           <?php echo wpautop(get_theme_mod('about_content', 'Te va a encantar esto:')); ?>
         </div>
@@ -51,7 +51,7 @@ Tú creces. Nosotros estamos detrás.')); ?>
         <!-- <p class="mt-5" data-aos="fade-up">
           <a href="<?php echo esc_url(home_url('/contacto-socio-flat-latte')); ?>"
             class="btn btn-get-started">
-            <?php echo get_theme_mod('about_button_text', 'Hagamos equipo'); ?>
+            <?php echo esc_html( get_theme_mod('about_button_text', 'Hagamos equipo') ); ?>
           </a>
         </p> -->
       </div>
@@ -159,7 +159,7 @@ Tú creces. Nosotros estamos detrás.')); ?>
           <div class="row align-items-center" data-aos="fade-up">
             <!-- Imagen (ocupa 1 columna cuando hay 2 servicios) -->
             <div class="col-12 col-sm-12 col-lg-4 me-0 me-lg-5 imagen-services"
-              style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/img_v_1.JPG')"
+              style="background-image: url('<?php echo esc_html( get_template_directory_uri() ); ?>/assets/img/img_v_1.JPG')"
               data-aos="fade-up">
             </div>
 
@@ -237,7 +237,7 @@ Tú creces. Nosotros estamos detrás.')); ?>
 <!-- FAQ Section -->
 <section id="faq" class="faq section">
   <div class="container section-title" data-aos="fade-up">
-    <h1><?php echo get_theme_mod('faq_title', 'Preguntas Frecuentes'); ?></h1>
+    <h1><?php echo esc_html( get_theme_mod('faq_title', 'Preguntas Frecuentes') ); ?></h1>
   </div>
 
   <div class="container" data-aos="fade-up">
@@ -247,8 +247,8 @@ Tú creces. Nosotros estamos detrás.')); ?>
           <?php
                 // Mostrar FAQs desde Customizer o por defecto
                 for ($i = 1; $i <= 8; $i++) {
-                    $faq_question = get_theme_mod("faq_{$i}_question");
-                    $faq_answer = get_theme_mod("faq_{$i}_answer");
+                    $faq_question = esc_html( get_theme_mod("faq_{$i}_question") );
+                    $faq_answer = esc_html( get_theme_mod("faq_{$i}_answer") );
                     
                     if ($faq_question || $i <= 6) {
                         echo '<div class="accordion-item">';

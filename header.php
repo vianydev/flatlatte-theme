@@ -15,7 +15,6 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
-	<title>Flat Latte Desarrollo Web para Creativos</title>
 	<meta
 	name="description"
 	content="Desarrollo Web para Emprendedores Creativos y Artistas"
@@ -38,7 +37,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
 	<header id="header" class="header d-flex align-items-center sticky-top">

@@ -14,7 +14,7 @@ get_header();
 	<div class="container">
 
 		<div class="col-6 col-lg-4 mb-5 d-flex mx-auto mx-lg-0">
-			<img class="img-fluid filter-bw" src="<?php echo get_template_directory_uri(); ?>/assets/img/404.png" alt="error404">
+			<img class='img-fluid filter-bw' src='<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/404.png' alt='error404'>
 			<div class="col-lg-8">
 				</div>
 			</div>

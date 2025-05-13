@@ -43,34 +43,41 @@ function flatlatte_setup() {
 	);
 
 	// // Set up the WordPress core custom background feature.
-	// add_theme_support(
-	// 	'custom-background',
-	// 	apply_filters(
-	// 		'flatlatte_custom_background_args',
-	// 		array(
-	// 			'default-color' => 'ffffff',
-	// 			'default-image' => '',
-	// 		)
-	// 	)
-	// );
+	add_theme_support(
+		'custom-background',
+		apply_filters(
+			'flatlatte_custom_background_args',
+			array(
+				'default-color' => 'ffffff',
+				'default-image' => '',
+			)
+		)
+	);
 
 	// // Add theme support for selective refresh for widgets.
-	// add_theme_support( 'customize-selective-refresh-widgets' );
+	add_theme_support( 'customize-selective-refresh-widgets' );
+
+	// Soporte para otros features
+	add_theme_support('automatic-feed-links');
+	add_theme_support('editor-styles');
+	add_theme_support('wp-block-styles');
+	add_theme_support('responsive-embeds');
+	add_theme_support('align-wide');
 
 	// /**
 	//  * Add support for core custom logo.
 	//  *
 	//  * @link https://codex.wordpress.org/Theme_Logo
 	//  */
-	// add_theme_support(
-	// 	'custom-logo',
-	// 	array(
-	// 		'height'      => 250,
-	// 		'width'       => 250,
-	// 		'flex-width'  => true,
-	// 		'flex-height' => true,
-	// 	)
-	// );
+	add_theme_support(
+		'custom-logo',
+		array(
+			'height'      => 250,
+			'width'       => 250,
+			'flex-width'  => true,
+			'flex-height' => true,
+		)
+	);
 }
 add_action( 'after_setup_theme', 'flatlatte_setup' );
 

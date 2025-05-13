@@ -4,8 +4,12 @@ Theme URI: https://flatlatte.com
 Author: @okvianey
 Author URI: https://flatlatte.com
 Description: Tema WordPress para emprendedores creativos
-Version: 2.0
 Text Domain: flatlatte
+Tested up to: 6.5
+Requires PHP: 7.4
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Version: 2.1
 */
 
 :root {
@@ -56,6 +60,26 @@ Text Domain: flatlatte
 /* Smooth scroll */
 :root {
   scroll-behavior: smooth;
+}
+
+/* WordPress default classes */
+.wp-caption {}
+.wp-caption-text {}
+.gallery-caption {}
+.bypostauthor {}
+.alignright {}
+.alignleft {}
+.aligncenter {}
+.screen-reader-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 }
 
 /* === General y Classes Compartidas=== */

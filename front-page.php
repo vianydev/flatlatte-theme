@@ -11,10 +11,10 @@ get_header();
     <div class="row justify-content-start justify-content-lg-between align-items-end hero-title">
       <div class="col-lg-8 order-lg-1">
         <h1 data-aos="fade-up" data-aos-delay="300">
-          <?php echo get_theme_mod('hero_title', 'Tienes algo único que merece ser visto.'); ?>
+          <?php echo esc_html(  get_theme_mod('hero_title', 'Tienes algo único que merece ser visto.') ); ?>
         </h1>
         <p data-aos="fade-up" data-aos-delay="300" class="col-10 opacity-25">
-          <?php echo get_theme_mod('hero_text', 'Sitios web para creativos, emprendedores y freelancers'); ?>
+          <?php echo esc_html( get_theme_mod('hero_text', 'Sitios web para creativos, emprendedores y freelancers') ); ?>
         </p>
       </div>
     </div>
@@ -26,7 +26,7 @@ get_header();
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-10 mb-5 mb-lg-0 order-2 d-flex flex-column text-center">
-        <h1 class="lh-sm my-lg-4" data-aos="fade-up"><?php echo get_theme_mod('about_title', 'Muestra al mundo lo que haces'); ?></h1>
+        <h1 class="lh-sm my-lg-4" data-aos="fade-up"><?php echo esc_html( get_theme_mod('about_title', 'Muestra al mundo lo que haces') ); ?></h1>
 
         <div class="col-lg-11 mb-4" data-aos="fade-up">
           <?php echo wpautop(get_theme_mod('about_content', 'Creamos sitios web limpios y  bien pensados, sin secciones innesarias, para que tu proyecto conecte con tu audiencia, sin complicarte con detalles técnicos.')); ?>
@@ -91,7 +91,7 @@ get_header();
       <p class="mt-5" data-aos="fade-up">
         <a href="<?php echo esc_url(home_url('/precios')); ?>"
           class="btn btn-get-started">
-          <?php echo get_theme_mod('about_button_text', 'Quiero mi sitio web'); ?>
+          <?php echo esc_html( get_theme_mod('about_button_text', 'Quiero mi sitio web') ); ?>
         </a>
       </p>
     </div>
@@ -261,7 +261,7 @@ get_header();
           <div class="row align-items-strench" data-aos="fade-up">
             <!-- Imagen (ocupa 1 columna cuando hay 2 servicios) -->
             <div class="col-12 col-sm-12 col-lg-4 imagen-services"
-              style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/img_v_1.JPG')"
+              style="background-image: url('<?php echo esc_html( get_template_directory_uri() ); ?>/assets/img/img_v_1.JPG')"
               data-aos="fade-up">
             </div>
 
@@ -311,7 +311,7 @@ get_header();
 <!-- FAQ Section -->
 <section id="faq" class="faq section">
   <div class="container section-title" data-aos="fade-up">
-    <h1><?php echo get_theme_mod('faq_title', 'Preguntas Frecuentes'); ?></h1>
+    <h1><?php echo esc_html( get_theme_mod('faq_title', 'Preguntas Frecuentes') ); ?></h1>
   </div>
 
   <div class="container" data-aos="fade-up">

@@ -20,6 +20,7 @@ function flatlatte_customize_register( $wp_customize ) {
     $wp_customize->add_setting('hero_title', array(
         'default' => 'Tienes algo único que merece ser visto.',
         'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_text_field',
     ));
     
     $wp_customize->add_control('hero_title_control', array(
@@ -38,6 +39,7 @@ function flatlatte_customize_register( $wp_customize ) {
     $wp_customize->add_setting('about_title', array(
         'default' => 'Sigue creando',
         'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_text_field',
     ));
     
     $wp_customize->add_control('about_title_control', array(
@@ -50,6 +52,7 @@ function flatlatte_customize_register( $wp_customize ) {
     $wp_customize->add_setting('about_content', array(
         'default' => 'Músicos, fotógrafos, diseñadores, escritores... tenemos algo en común: <b>¡nos encanta crear!.</b>',
         'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_text_field',
     ));
     
     $wp_customize->add_control('about_content_control', array(
@@ -62,6 +65,7 @@ function flatlatte_customize_register( $wp_customize ) {
     $wp_customize->add_setting('about_button_text', array(
         'default' => 'Hagamos equipo',
         'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_text_field',
     ));
     
     $wp_customize->add_control('about_button_text_control', array(
@@ -74,6 +78,7 @@ function flatlatte_customize_register( $wp_customize ) {
     $wp_customize->add_setting('about_button_link', array(
         'default' => '',
         'transport' => 'refresh',
+        'sanitize_callback' => 'esc_url_raw',
     ));
     
     $wp_customize->add_control('about_button_link_control', array(
@@ -86,6 +91,7 @@ function flatlatte_customize_register( $wp_customize ) {
     $wp_customize->add_setting('about_image', array(
         'default' => '',
         'transport' => 'refresh',
+        'sanitize_callback' => 'esc_url_raw',
     ));
     
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'about_image_control', array(
@@ -148,6 +154,7 @@ $wp_customize->add_control('portfolio_page_control', array(
     $wp_customize->add_setting('faq_title', array(
         'default' => 'Preguntas Frecuentes',
         'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_text_field',
     ));
     
     $wp_customize->add_control('faq_title_control', array(
@@ -162,6 +169,7 @@ $wp_customize->add_control('portfolio_page_control', array(
         $wp_customize->add_setting("faq_{$i}_question", array(
             'default' => '',
             'transport' => 'refresh',
+            'sanitize_callback' => 'sanitize_text_field',
         ));
         
         $wp_customize->add_control("faq_{$i}_question_control", array(
@@ -174,6 +182,7 @@ $wp_customize->add_control('portfolio_page_control', array(
         $wp_customize->add_setting("faq_{$i}_answer", array(
             'default' => '',
             'transport' => 'refresh',
+            'sanitize_callback' => 'sanitize_text_field',
         ));
         
         $wp_customize->add_control("faq_{$i}_answer_control", array(
