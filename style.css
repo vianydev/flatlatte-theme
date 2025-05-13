@@ -26,19 +26,17 @@ Text Domain: flatlatte
   --default-color: #2e2e2e;
   --heading-color: #2e2e2e;
   --accent-color: #4e4e4e;
+  --accent-green: #007b5e;
   --surface-color: #f8f8f8;
-  --contrast-color: #f8f8f8;
-  --complete-white: #fff
-}
-
-/* Colores de Nav Menu */
-:root {
+  --contrast-color: #f9f9f9;
+  --complete-white: #fff;
   --nav-color: #2e2e2e;
   --nav-hover-color: #6b8e8c;
   --nav-mobile-background-color: #f5f5f5;
   --nav-dropdown-background-color: #f5f5f5;
   --nav-dropdown-color: #212529;
   --nav-dropdown-hover-color: #6b8e8c;
+  --whatsapp-green: #5EDB9D;
 }
 
 .light-background {
@@ -1183,6 +1181,215 @@ Archive Portfolio === */
   background: color-mix(in srgb, var(--accent-color) 90%, black 15%);
 }
 
+
+/*--------------------------------------------------------------
+# Pricing Section
+--------------------------------------------------------------*/
+.pricing .pricing-item {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 96%);
+  padding: 40px 40px;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.pricing h3 {
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.pricing h4 {
+  color: var(--accent-color);
+  font-size: 48px;
+  font-weight: 700;
+  font-family: var(--heading-font);
+  margin-bottom: 0;
+}
+
+.pricing h4 sup {
+  font-size: 28px;
+}
+
+.pricing h4 span {
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.pricing .description {
+  font-size: 14px;
+  height: 50px;
+}
+
+.pricing .cta-btn {
+  border: 1px solid var(--default-color);
+  color: var(--default-color);
+  display: block;
+  text-align: center;
+  padding: 10px 35px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--heading-font);
+  transition: 0.3s;
+  margin-top: 20px;
+  margin-bottom: 6px;
+}
+
+.pricing .cta-btn:hover {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  border-color: var(--accent-color);
+}
+
+.pricing .imagen-pricing {
+  min-height: 300px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.pricing ul {
+  padding: 0;
+  list-style: none;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  text-align: left;
+  line-height: 20px;
+}
+
+.pricing ul li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.pricing ul li:last-child {
+  padding-bottom: 0;
+}
+
+.pricing ul i {
+  color: #059652;
+  font-size: 24px;
+  padding-right: 3px;
+}
+
+.pricing ul .na {
+  color: color-mix(in srgb, var(--default-color), transparent 60%);
+}
+
+.pricing ul .na i {
+  color: color-mix(in srgb, var(--default-color), transparent 60%);
+}
+
+.pricing ul .na span {
+  text-decoration: line-through;
+}
+
+.pricing .featured {
+  position: relative;
+}
+
+.pricing .featured .popular {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  padding: 4px 15px 6px 15px;
+  margin: 0;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.pricing .featured .cta-btn {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  border-color: var(--accent-color);
+}
+
+@media (max-width: 1400px) {
+  .pricing .description {
+    height: 95px;
+  }
+}
+@media (max-width: 992px) {
+  .pricing .box {
+    max-width: 60%;
+    margin: 0 auto 30px auto;
+  }
+
+  .pricing .description {
+    height: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .pricing .box {
+    max-width: 80%;
+    margin: 0 auto 30px auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .pricing .box {
+    max-width: 100%;
+    margin: 0 auto 30px auto;
+  }
+}
+
+/* EXTRA SECTION */
+
+.extra .cta-btn:hover {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  border-color: var(--accent-color);
+}
+
+.extra .card-text {
+  min-height: 97px;
+}
+
+.extra ul {
+  padding: 0;
+  list-style: none;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  text-align: left;
+  line-height: 20px;
+}
+
+.extra ul li {
+  padding: 2px 0;
+  display: flex;
+  align-items: center;
+}
+
+.extra ul li:last-child {
+  padding-bottom: 0;
+}
+
+.extra ul i {
+  color: #059652;
+  font-size: 24px;
+  padding-right: 3px;
+}
+
+@media (max-width: 991px) {
+  .extra .card-text {
+    height: auto;
+  }
+}
+
+
+/* CTA SECTION */
+
+.CTA {
+  /* background-image: url("../img/flatlatte-v.jpg"); */
+  background-size: cover;
+  background-position: bottom;
+}
+
+
 /* LINK TREE */
 
 .linktree-container {
@@ -1290,5 +1497,93 @@ Archive Portfolio === */
   .link-custom-img,
   .link-guion {
     display: none;
+  }
+}
+
+/* CALCULADORA DE PRECIOS */
+
+#cotizador {
+  max-width: 800px;
+  /* margin: auto; */
+  padding: 20px;
+  background: var(--complete-white);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+#cotizador h3 {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  color: var(--default-color);
+}
+
+#cotizador label {
+  display: block;
+  margin: 5px 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#cotizador input[type="radio"],
+#cotizador input[type="checkbox"]  {
+  margin-right: 8px;
+  accent-color: var(--accent-color);
+}
+
+
+/* #cotizador input.extra:disabled + label, */
+#cotizador label:has(input:disabled) {
+  color: #aaa !important;
+  cursor: not-allowed !important;
+  text-decoration: line-through;
+  opacity: 0.7;
+  pointer-events: none; /* Evita cualquier interacción */
+}
+
+#total {
+  color: var(--accent-green);
+  font-weight: bold;
+}
+
+#resumen {
+  background: var(--contrast-color);
+  padding: 15px;
+  border-radius: 12px;
+  /* line-height: 1.6; */
+}
+
+.btn-whatsapp {
+  color: var(--default-color);
+  border-radius: 2px;
+  padding: 12px 30px;
+  border: 2px solid var(--whatsapp-green);
+  transition: 0.3s all ease-in-out;
+  text-align: center;
+  font-weight: bold;
+
+}
+
+.btn-whatsapp:hover {
+  background: var(--whatsapp-green);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media screen and (max-width: 600px) {
+  #cotizador {
+    padding: 15px;
+  }
+
+  #cotizador h3 {
+    font-size: 1rem;
+  }
+
+  .boton-whatsapp {
+    font-size: 0.95rem;
+    padding: 10px 16px;
   }
 }

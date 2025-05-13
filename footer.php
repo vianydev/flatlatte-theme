@@ -14,10 +14,10 @@
 	<footer id="footer" class="footer light-background">
 		<div class="container">
 			<div class="text-center mb-4 footer-nav">
-				<a class="m-3" href="<?php echo esc_url(home_url('/')); ?>" aria-controls="primary-menu" aria-expanded="false">flat latte</a>
-				<a class="m-3" href="<?php echo esc_url(home_url('/socio')); ?>" aria-controls="primary-menu" aria-expanded="false">Ser socio</a>
-				<a class="m-3" href="<?php echo esc_url(home_url('/okvianey')); ?>" aria-controls="primary-menu" aria-expanded="false">Sobre mi</a>
-				<a class="m-3" href="<?php echo esc_url(home_url('/contacto')); ?>" aria-controls="primary-menu" aria-expanded="false">Contacto</a>
+				<a class="m-1 m-lg-3" href="<?php echo esc_url(home_url('/')); ?>" aria-controls="primary-menu" aria-expanded="false">flat latte</a>
+				<a class="m-1 m-lg-3" href="<?php echo esc_url(home_url('/socio')); ?>" aria-controls="primary-menu" aria-expanded="false">Ser socio</a>
+				<a class="m-1 m-lg-3" href="<?php echo esc_url(home_url('/okvianey')); ?>" aria-controls="primary-menu" aria-expanded="false">Sobre mi</a>
+				<a class="m-1 m-lg-3" href="<?php echo esc_url(home_url('/contacto')); ?>" aria-controls="primary-menu" aria-expanded="false">Contacto</a>
 			</div>
 			<div class="text-center">
 					<p class="fw-bold">Hecho con café y código.</p>

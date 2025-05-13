@@ -98,4 +98,87 @@
     }
   });
 
+  // 
+
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+  const radios = document.querySelectorAll('input[name="paquete"]');
+  const checkboxes = document.querySelectorAll('.extra');
+  const totalDisplay = document.getElementById('total');
+  const resumen = document.getElementById('resumen');
+  const btnWhatsapp = document.getElementById('btn-whatsapp');
+
+  const chatCheckbox = document.querySelector('input[data-label="Chat"]'); 
+  const dominioCheckbox = document.querySelector('input[data-label="Dominio personalizado"]'); 
+  const autoadministrableCheckbox = document.querySelector('input[data-label="Sitio autoadministrable"]'); 
+
+  function actualizarOpciones() {
+    const basicoSeleccionado = document.querySelector('input[name="paquete"][data-label="Básico"]').checked;
+    const proSeleccionado = document.querySelector('input[name="paquete"][data-label="Pro"]').checked;
+    const tiendaSeleccionado = document.querySelector('input[name="paquete"][data-label="Tienda Online"]').checked;
+    
+    // Si se selecciona Básico, deshabilitamos y desmarcamos el chat
+    if (basicoSeleccionado) {
+      chatCheckbox.disabled = true;
+      chatCheckbox.checked = false;
+      dominioCheckbox.disabled = true;
+      dominioCheckbox.checked = false;
+      autoadministrableCheckbox.disabled = false;
+    } else if (proSeleccionado || tiendaSeleccionado){
+      chatCheckbox.disabled = true;
+      chatCheckbox.checked = false;
+      dominioCheckbox.disabled = true;
+      dominioCheckbox.checked = false;
+      autoadministrableCheckbox.disabled = true;
+      autoadministrableCheckbox.checked = false;
+    } else {
+      chatCheckbox.disabled = false;
+      dominioCheckbox.disabled = false;
+      autoadministrableCheckbox.disabled = false;
+    }
+    
+    calcularTotal();
+  }
+
+  function calcularTotal() {
+    let total = 0;
+    let resumenHTML = "<strong>Resumen de tu selección:</strong><ul>";
+    let mensajeWA = "Hola, estoy interesado en este sitio web:\n";
+
+    radios.forEach(r => {
+      if (r.checked) {
+        total += parseInt(r.value);
+        resumenHTML += `<li><strong>Paquete:</strong> ${r.dataset.label} ($${parseInt(r.value).toLocaleString()})</li>`;
+        mensajeWA += `• Paquete: ${r.dataset.label} ($${r.value})\n`;
+      }
+    });
+
+    resumenHTML += "<li><strong>Extras:</strong><ul>";
+    checkboxes.forEach(c => {
+      if (c.checked && !c.disabled) { // Solo sumamos si no está deshabilitado
+        total += parseInt(c.value);
+        resumenHTML += `<li>${c.dataset.label} ($${parseInt(c.value).toLocaleString()})</li>`;
+        mensajeWA += `• Extra: ${c.dataset.label} ($${c.value})\n`;
+      }
+    });
+    resumenHTML += "</ul></li></ul>";
+    resumenHTML += `<strong>Total estimado: $${total.toLocaleString()}</strong>`;
+    mensajeWA += `\nTotal: $${total.toLocaleString()}`;
+
+    totalDisplay.textContent = `$${total.toLocaleString()}`;
+    resumen.innerHTML = resumenHTML;
+
+    // Reemplaza el número con tu WhatsApp
+    let numero = "5219223400366";
+    btnWhatsapp.href = `https://wa.me/${numero}?text=${encodeURIComponent(mensajeWA)}`;
+  }
+
+  radios.forEach(r => r.addEventListener('change', actualizarOpciones));
+  checkboxes.forEach(c => c.addEventListener('change', calcularTotal));
+
+  // Inicializamos el estado al cargar la página
+  actualizarOpciones();
+  });
+
 })();
