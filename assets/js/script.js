@@ -98,9 +98,9 @@
     }
   });
 
-  // 
-
-
+  /**
+   * COTIZADOR 
+   **/
 
   document.addEventListener('DOMContentLoaded', function () {
   const radios = document.querySelectorAll('input[name="paquete"]');
@@ -125,6 +125,13 @@
       dominioCheckbox.disabled = true;
       dominioCheckbox.checked = false;
       autoadministrableCheckbox.disabled = false;
+      const tooltip = document.createElement('div');
+      tooltip.innerHTML = 'El paquete Básico incluye funcionalidad de chat básica';
+      tooltip.className = 'tooltip-chat';
+      chatCheckbox.appendChild(tooltip);
+
+
+
     } else if (proSeleccionado || tiendaSeleccionado){
       chatCheckbox.disabled = true;
       chatCheckbox.checked = false;
@@ -143,18 +150,38 @@
 
   function calcularTotal() {
     let total = 0;
-    let resumenHTML = "<strong>Resumen de tu selección:</strong><ul>";
+    let resumenHTML = "<h5>Resumen de tu selección:</h5><ul>";
     let mensajeWA = "Hola, estoy interesado en este sitio web:\n";
 
     radios.forEach(r => {
       if (r.checked) {
         total += parseInt(r.value);
         resumenHTML += `<li><strong>Paquete:</strong> ${r.dataset.label} ($${parseInt(r.value).toLocaleString()})</li>`;
+
+        if (r.dataset.label == 'Básico') {
+          resumenHTML += `
+            <ul class="resumen-incluye"> Incluye:  
+              <li>Dominio personalizado</li>
+              <li>Chat</li>
+            </ul>
+            `;
+        } else if (r.dataset.label == 'Pro' || r.dataset.label == 'Tienda Online') {
+          resumenHTML += `
+            <ul class="resumen-incluye"> Incluye:  
+              <li>Dominio personalizado</li>
+              <li>Chat</li>
+              <li>Sitio autoadministrable</li>
+            </ul>
+         `;
+        }
+
+
         mensajeWA += `• Paquete: ${r.dataset.label} ($${r.value})\n`;
       }
     });
 
-    resumenHTML += "<li><strong>Extras:</strong><ul>";
+    resumenHTML += `<li>Extras:<ul class="resumen-incluye">`;
+
     checkboxes.forEach(c => {
       if (c.checked && !c.disabled) { // Solo sumamos si no está deshabilitado
         total += parseInt(c.value);
@@ -162,8 +189,15 @@
         mensajeWA += `• Extra: ${c.dataset.label} ($${c.value})\n`;
       }
     });
+
+    // if (basicoSeleccionado) {
+      
+    // }
+
+
+
     resumenHTML += "</ul></li></ul>";
-    resumenHTML += `<strong>Total estimado: $${total.toLocaleString()}</strong>`;
+    resumenHTML += `<p class="total-estimado"><strong>Total estimado: $${total.toLocaleString()}</strong></p>`;
     mensajeWA += `\nTotal: $${total.toLocaleString()}`;
 
     totalDisplay.textContent = `$${total.toLocaleString()}`;

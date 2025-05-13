@@ -1,6 +1,7 @@
 <?php 
 /**
- * Template Name: Página Precios
+ * Template Name: Página Precios Cotizador
+ * 
  */
 get_header();
 ?>
@@ -40,11 +41,10 @@ get_header();
             <li class="na"><i class="bi bi-x"></i> <span>Tienda en línea</span></li>
           </ul>
           <p class="mt-5 text-center" data-aos="zoom-in" data-aos-delay="100">
-            <a href="https://wa.me/?text=Hola%2C%20me%20interesa%20un%20*sitio%20web%20b%C3%A1sico*" target="_blank" class="btn btn-get-started mx-auto">
+            <a href="<?php echo esc_url(home_url('/precios#cotizador')); ?>" class="btn btn-get-started mx-auto">
               Lo quiero
             </a>
           </p>
-          <!-- <p class="text-center small">No credit card required</p> -->
         </div>
       </div>
       <!-- End Pricing Item -->
@@ -71,7 +71,7 @@ get_header();
             <li class="na"><i class="bi bi-x"></i> <span>Tienda en línea</span></li>
           </ul>
           <p class="mt-5 text-center" data-aos="zoom-in" data-aos-delay="100">
-            <a href="https://wa.me/?text=Hola%2C%20me%20interesa%20un%20*sitio%20web%20Pro*" target="_blank" class="btn btn-get-started mx-auto">
+            <a href="<?php echo esc_url(home_url('/precios#cotizador')); ?>" class="btn btn-get-started mx-auto">
               Lo quiero
             </a>
           </p>
@@ -101,11 +101,10 @@ get_header();
             <li class=""><i class="bi bi-check"></i> <span>Tienda en línea</span></li>
           </ul>
           <p class="mt-5 text-center" data-aos="zoom-in" data-aos-delay="100">
-            <a href="https://wa.me/?text=Hola%2C%20me%20interesa%20una%20*Tienda%Online*" target="_blank" class="btn btn-get-started mx-auto">
+            <a href="<?php echo esc_url(home_url('/precios#cotizador')); ?>" class="btn btn-get-started mx-auto">
               Lo quiero
             </a>
           </p>
-          <!-- <p class="text-center small">No credit card required</p> -->
         </div>
       </div>
       <!-- End Pricing Item -->    
@@ -113,11 +112,16 @@ get_header();
     
   </div>
   <!-- /TABLA PRECIOS -->
-  <!-- TABLA PRECIOS 2 -->
-  <div class="section">
-    <div class="col section-title text-center">
-      <h2 data-aos="fade-up">Especial para músicos, artistas y creadores</h2>
+  <!-- PRECIOS LINK TREE -->
+  <div class="section pb-0">
+    <!-- Section Title -->
+    <div class="container section-title text-center" data-aos="fade-up">
+      <div class="row col-10 mx-auto">
+        <h2 data-aos="fade-up">Especial para músicos, artistas y creadores</h2>
+      </div>
     </div>
+    <!-- End Section Title -->
+   
     <div class="container">
       <div class="row gy-4 justify-content-center">
   
@@ -143,99 +147,95 @@ get_header();
               <li class=""><i class="bi bi-check"></i> <span>2 revisiones</span></li>
             </ul>
             <p class="mt-5 text-center" data-aos="zoom-in" data-aos-delay="100">
-              <a href="https://wa.me/?text=Hola%2C%20me%20interesa%20un%20*sitio%20web%20b%C3%A1sico*" target="_blank" class="btn btn-get-started mx-auto">
+              <a href="<?php echo esc_url(home_url('/precios#cotizador')); ?>" class="btn btn-get-started mx-auto">
                 Lo quiero
               </a>
-            </p>
-            <!-- <p class="text-center small">No credit card required</p> -->
+          </p>
           </div>
         </div>
         <!-- End Pricing Item -->
        
       </div>
-      <!-- notas al pie -->
-      <div class="mt-5" >
-        <p data-aos="zoom-in-right" data-aos-delay="100"><sup>*</sup>Dominio y Hospedaje gratis por un año</p>
-      </div>
     </div>
   </div>
-  <!-- /TABLA PRECIOS 2 -->
+  <!-- / PRECIOS LINK TREE -->
   <!-- Modulos Extra Section -->
-  <div class="container extra">
+  <div class="section extra pb-0">
     <h2 class="text-center mb-5" data-aos="zoom-in" data-aos-delay="100">Agrega funcionalidades</h2>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-
-      <div class="col" data-aos="zoom-in" data-aos-delay="100">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body text-center">
-            <i class="bi bi-pencil-square fs-3"></i>
-            <h5 class="card-title">Autoadministrable</h5>
-            <p class="card-text">Cambia textos e imágenes tú mismo, sin necesidad de tocar el código.</p>
-            <span class="fs-6">$1,500 MXN</span>
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col" data-aos="zoom-in" data-aos-delay="100">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <i class="bi bi-pencil-square fs-3"></i>
+              <h5 class="card-title">Autoadministrable</h5>
+              <p class="card-text">Cambia textos e imágenes tú mismo, sin necesidad de tocar el código.</p>
+              <span class="fs-6">$1,500 MXN</span>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="col" data-aos="zoom-in" data-aos-delay="100">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body text-center">
-            <i class="bi bi-pencil fs-3"></i>
-            <h5 class="card-title">Blog</h5>
-            <p class="card-text">Agrega una sección de blog para compartir noticias, artículos o novedades que puedes actualizar tú mismo.</p>
-            <span class="fs-6">$1,500 MXN</span>
+  
+        <div class="col" data-aos="zoom-in" data-aos-delay="100">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <i class="bi bi-pencil fs-3"></i>
+              <h5 class="card-title">Blog</h5>
+              <p class="card-text">Agrega una sección de blog para compartir noticias, artículos o novedades que puedes actualizar tú mismo.</p>
+              <span class="fs-6">$1,500 MXN</span>
+            </div>
           </div>
         </div>
-      </div>
-      
-      <div class="col" data-aos="zoom-in" data-aos-delay="100">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body text-center">
-            <i class="bi bi-chat-left-text fs-3"></i>
-            <h5 class="card-title">Chat</h5>
-            <p class="card-text">Conecta con tus clientes en tiempo real a través de WhatsApp o Messenger.</p>
-            <span class="fs-6">$900 MXN</span>
+        
+        <div class="col" data-aos="zoom-in" data-aos-delay="100">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <i class="bi bi-chat-left-text fs-3"></i>
+              <h5 class="card-title">Chat</h5>
+              <p class="card-text">Conecta con tus clientes en tiempo real a través de WhatsApp o Messenger.</p>
+              <span class="fs-6">$900 MXN</span>
+            </div>
           </div>
         </div>
-      </div>
-      
-      <div class="col" data-aos="zoom-in" data-aos-delay="100">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body text-center">
-            <i class="bi bi-calendar2-check fs-3"></i>
-            <h5 class="card-title">Sistema de reservaciones</h5>
-            <p class="card-text">Permite a tus clientes agendar citas, clases o servicios directamente desde tu sitio.</p>
-            <span class="fs-6">$1,500 MXN</span>
+        
+        <div class="col" data-aos="zoom-in" data-aos-delay="100">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <i class="bi bi-calendar2-check fs-3"></i>
+              <h5 class="card-title">Sistema de reservaciones</h5>
+              <p class="card-text">Permite a tus clientes agendar citas, clases o servicios directamente desde tu sitio.</p>
+              <span class="fs-6">$1,500 MXN</span>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="col" data-aos="zoom-in" data-aos-delay="100">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body text-center">
-            <i class="bi bi-file-earmark-text fs-3"></i>
-            <h5 class="card-title">Redacción de contenido </h5>
-            <p class="card-text">Creamos el texto de tu sitio usando tu estilo y objetivos.</p>
-            <span class="fs-6">$1,500 MXN</span>
+  
+        <div class="col" data-aos="zoom-in" data-aos-delay="100">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <i class="bi bi-file-earmark-text fs-3"></i>
+              <h5 class="card-title">Redacción de contenido </h5>
+              <p class="card-text">Creamos el texto de tu sitio usando tu estilo y objetivos.</p>
+              <span class="fs-6">$1,500 MXN</span>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="col" data-aos="zoom-in" data-aos-delay="100">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body text-center">
-            <i class="bi bi-globe fs-3"></i>
-            <h5 class="card-title">Dominio personalizado</h5>
-            <p class="card-text">Agrega un dominio (tumarca.com) y hospedaje por 1 año.</p>
-            <span class="fs-6">$700 MXN</span>
+  
+        <div class="col" data-aos="zoom-in" data-aos-delay="100">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <i class="bi bi-globe fs-3"></i>
+              <h5 class="card-title">Dominio personalizado</h5>
+              <p class="card-text">Agrega un dominio (tumarca.com) y hospedaje por 1 año.</p>
+              <span class="fs-6">$700 MXN</span>
+            </div>
           </div>
         </div>
+  
       </div>
-
     </div>
   </div>
   <!-- /Modulos Extra Section -->
   <!-- Soporte y mantenimiento Section -->
-  <div id="extra" class="section pb-0">
+  <div class="section soporte pb-0">
     <div class="container">
       <h2 class="text-center mb-5" data-aos="zoom-in" data-aos-delay="100">Soporte y mantenimiento</h2>
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4">
@@ -311,8 +311,11 @@ get_header();
         </div>
         <!-- notas al pie -->
         <div>
-          <p data-aos="zoom-in-right" data-aos-delay=""><sup>**</sup>Precio sujeto a cambio</p>
-          <p data-aos="zoom-in-right" data-aos-delay="100">Todos los precios incluyen I.V.A.</p>
+          <ul class="nota-al-pie">
+            <li data-aos="zoom-in-right" data-aos-delay="" class="mb-0 primera-nota">Dominio y hospedaje gratis por un año</li>
+            <li data-aos="zoom-in-right" data-aos-delay="" class="mb-0 segunda-nota">Precio sujeto a cambio</li>
+            <li data-aos="zoom-in-right" data-aos-delay="100" class="m-0">Todos los precios incluyen I.V.A.</li>
+          </ul>
         </div>
         
       </div>
@@ -323,122 +326,45 @@ get_header();
 <!-- /Pricing Section -->
 
 <!-- COTIZADOR -->
-<div class="cotizador">
-  <h2 class="text-center mb-5" data-aos="zoom-in" data-aos-delay="100">Cotiza tu proyecto</h2>
+<section class="section cotizador">
   <div id="cotizador" class="container">
-    <div class="row">
-      <div class="col-12 col-md-6">
-        <h3>Selecciona tu paquete base</h3>
-        <label><input type="radio" name="paquete" value="1900" data-label="Portafolio-un-solo-link">🌴 Portafolio-un-solo-link ($1,900)</label>
-        <label><input type="radio" name="paquete" value="3500" data-label="Básico">🎯 Básico ($3,500)</label>
-        <label><input type="radio" name="paquete" value="5100" data-label="Pro">🚀 Pro ($5,100)</label>
-        <label><input type="radio" name="paquete" value="9800" data-label="Tienda Online">🛒 Tienda Online ($9,800)</label>
+    <h1 class="text-md-center mb-5" data-aos="zoom-in" data-aos-delay="100">Cotiza tu proyecto</h1>
+    <div class="row row-cols-1 align-items-strench">
+      <div class="col col-lg-6">
+        <div class="cotizador-box">
+          <h3>Elige tu paquete base:</h3>
+          <label><input type="radio" name="paquete" value="1900" data-label="Portafolio-un-solo-link">🌴 Portafolio-un-solo-link ($1,900)</label>
+          <label><input type="radio" name="paquete" value="3500" data-label="Básico">🎯 Básico ($3,500)</label>
+          <label><input type="radio" name="paquete" value="5100" data-label="Pro">🚀 Pro ($5,100)</label>
+          <label><input type="radio" name="paquete" value="9800" data-label="Tienda Online">🛒 Tienda Online ($9,800)</label>
+        </div>     
+        <div class="cotizador-box">
+          <h3>Agrega:</h3>
+          <label><input type="checkbox" class="extra" value="700" data-label="Dominio personalizado">Dominio personalizado($700)</label>
+          <label><input type="checkbox" class="extra" value="900" data-label="Chat">Chat ($900)</label>
+          <label><input type="checkbox" class="extra" value="1500" data-label="Sitio autoadministrable">Sitio autoadministrable ($1,500)</label>
+          <label><input type="checkbox" class="extra" value="1500" data-label="Blog">Blog ($1,500)</label>
+          <label><input type="checkbox" class="extra" value="1500" data-label="Sistema de reservaciones">Sistema de reservaciones ($1,500)</label>
+          <label><input type="checkbox" class="extra" value="1500" data-label="Redacción de contenido">Redacción de contenido ($1,500)</label>
+        </div>
       </div>
-      <div class="col-12 col-md-6">
-        <h3>Funcionalidades extra</h3>
-        <label><input type="checkbox" class="extra" value="700" data-label="Dominio personalizado">Dominio personalizado($700)</label>
-        <label><input type="checkbox" class="extra" value="900" data-label="Chat">Chat ($900)</label>
-        <label><input type="checkbox" class="extra" value="1500" data-label="Sitio autoadministrable">Sitio autoadministrable ($1,500)</label>
-        <label><input type="checkbox" class="extra" value="1500" data-label="Blog">Blog ($1,500)</label>
-        <label><input type="checkbox" class="extra" value="1500" data-label="Sistema de reservaciones">Sistema de reservaciones ($1,500)</label>
-        <label><input type="checkbox" class="extra" value="1500" data-label="Redacción de contenido">Redacción de contenido ($1,500)</label>
-      </div>
-  
-      <div class="col-12"> 
-        <div id="resumen" class="my-4">
+      <div class="col col-lg-6"> 
+        <div class="resumen row align-content-between">
+          <div id="resumen" class="">
+            <h3 class=" text-center">Total estimado: <span id="total">$0</span></h3>
+          </div>
+          <div class="">
+            <a id="btn-whatsapp" class="btn-whatsapp mb-1" href="#" target="_blank">Enviar por WhatsApp</a>
+          </div>
+        </div>
 
-          <h3 class=" text-center">Total estimado: <span id="total">$0</span></h3>
-        </div>
-        
-        <div class="text-center my-4">
-          <a id="btn-whatsapp" class="btn-whatsapp" href="#" target="_blank">Enviar por WhatsApp</a>
-        </div>
       </div>
 
     </div>
 
  </div>
 
-</div>
-
-<!-- <script>
-  const radios = document.querySelectorAll('input[name="paquete"]');
-  const checkboxes = document.querySelectorAll('.extra');
-  const totalDisplay = document.getElementById('total');
-  const resumen = document.getElementById('resumen');
-  const btnWhatsapp = document.getElementById('btn-whatsapp');
-
-  const chatCheckbox = document.querySelector('input[data-label="Chat"]'); 
-  const dominioCheckbox = document.querySelector('input[data-label="Dominio personalizado"]'); 
-  const autoadministrableCheckbox = document.querySelector('input[data-label="Sitio autoadministrable"]'); 
-
-  function actualizarOpciones() {
-    const basicoSeleccionado = document.querySelector('input[name="paquete"][data-label="Básico"]').checked;
-    const proSeleccionado = document.querySelector('input[name="paquete"][data-label="Pro"]').checked;
-    const tiendaSeleccionado = document.querySelector('input[name="paquete"][data-label="Tienda Online"]').checked;
-    
-    // Si se selecciona Básico, deshabilitamos y desmarcamos el chat
-    if (basicoSeleccionado) {
-      chatCheckbox.disabled = true;
-      chatCheckbox.checked = false;
-      dominioCheckbox.disabled = true;
-      dominioCheckbox.checked = false;
-      autoadministrableCheckbox.disabled = false;
-    } else if (proSeleccionado || tiendaSeleccionado){
-      chatCheckbox.disabled = true;
-      chatCheckbox.checked = false;
-      dominioCheckbox.disabled = true;
-      dominioCheckbox.checked = false;
-      autoadministrableCheckbox.disabled = true;
-      autoadministrableCheckbox.checked = false;
-    } else {
-      chatCheckbox.disabled = false;
-      dominioCheckbox.disabled = false;
-      autoadministrableCheckbox.disabled = false;
-    }
-    
-    calcularTotal();
-  }
-
-  function calcularTotal() {
-    let total = 0;
-    let resumenHTML = "<strong>Resumen de tu selección:</strong><ul>";
-    let mensajeWA = "Hola, estoy interesado en este sitio web:\n";
-
-    radios.forEach(r => {
-      if (r.checked) {
-        total += parseInt(r.value);
-        resumenHTML += `<li><strong>Paquete:</strong> ${r.dataset.label} ($${parseInt(r.value).toLocaleString()})</li>`;
-        mensajeWA += `• Paquete: ${r.dataset.label} ($${r.value})\n`;
-      }
-    });
-
-    resumenHTML += "<li><strong>Extras:</strong><ul>";
-    checkboxes.forEach(c => {
-      if (c.checked && !c.disabled) { // Solo sumamos si no está deshabilitado
-        total += parseInt(c.value);
-        resumenHTML += `<li>${c.dataset.label} ($${parseInt(c.value).toLocaleString()})</li>`;
-        mensajeWA += `• Extra: ${c.dataset.label} ($${c.value})\n`;
-      }
-    });
-    resumenHTML += "</ul></li></ul>";
-    resumenHTML += `<strong>Total estimado: $${total.toLocaleString()}</strong>`;
-    mensajeWA += `\nTotal: $${total.toLocaleString()}`;
-
-    totalDisplay.textContent = `$${total.toLocaleString()}`;
-    resumen.innerHTML = resumenHTML;
-
-    // Reemplaza el número con tu WhatsApp
-    let numero = "5219223400366";
-    btnWhatsapp.href = `https://wa.me/${numero}?text=${encodeURIComponent(mensajeWA)}`;
-  }
-
-  radios.forEach(r => r.addEventListener('change', actualizarOpciones));
-  checkboxes.forEach(c => c.addEventListener('change', calcularTotal));
-
-  // Inicializamos el estado al cargar la página
-  actualizarOpciones();
-</script> -->
+</section>
 <!-- /COTIZADOR -->
 
 <!-- CTA Section -->

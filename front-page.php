@@ -74,7 +74,7 @@ get_header();
           <i class="bi bi-puzzle"></i>
         </div>
         <h5 class="mt-3">Secciones personalizadas</h5>
-        <p class="">Servicios, portafolio, tienda, contacto… Lo que necesites.</p>
+        <p class="">Creamos un sitio con las secciones que realmente necesitas, Ya sea un portafolio, tienda o página de contacto, todo depende de tus objetivos.</p>
       </div>
   
       <div class="col-md-6 col-lg-4 about-box text-center p-3" data-aos="fade-up">
@@ -82,14 +82,14 @@ get_header();
           <i class="bi bi-pencil-square"></i>
         </div>
         <h5 class="mt-3">Autogestionable</h5>
-        <p class="">Podrás editar los textos cuando quieras.</p>
+        <p class="">Podrás actualizar tu contenido cuando quieras, sin depender de un desarrollador.</p>
       </div>
 
     </div>
 
     <div class="row text-center">
       <p class="mt-5" data-aos="fade-up">
-        <a href="<?php echo esc_url(home_url('/contacto')); ?>"
+        <a href="<?php echo esc_url(home_url('/precios')); ?>"
           class="btn btn-get-started">
           <?php echo get_theme_mod('about_button_text', 'Quiero mi sitio web'); ?>
         </a>
@@ -242,8 +242,8 @@ get_header();
         </div>
 
         <div class="col-lg-12 mt-5 text-center">
-          <a class="btn btn-get-started" href="<?php echo esc_url(home_url('/contacto')); ?>"  data-aos="fade-up">
-            Empezar ahora
+          <a class="btn btn-get-started" href="<?php echo esc_url(home_url('/precios')); ?>"  data-aos="fade-up">
+            Quiero mi sitio web
           </a>
         </div>
       </div>
@@ -258,40 +258,42 @@ get_header();
     <div class="row align-items-start justify-content-between">
       <div class="col-lg-12 order-lg-2">
         <div class="container">
-          <div class="row align-items-center" data-aos="fade-up">
+          <div class="row align-items-strench" data-aos="fade-up">
             <!-- Imagen (ocupa 1 columna cuando hay 2 servicios) -->
-            <div class="col-12 col-sm-12 col-lg-4 my-2 imagen-services"
+            <div class="col-12 col-sm-12 col-lg-4 imagen-services"
               style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/img_v_1.JPG')"
               data-aos="fade-up">
             </div>
 
             <!-- Servicio 1 -->
-            <div class="col col-sm-12 col-lg-8 my-2">
-              <div class="services-item" data-aos="fade-up" data-aos-delay="300">
-                <h1 class="lh-sm my-lg-4" data-aos="fade-up">
-                ¿Eres freelancer y quieres ofrecer sitios web?
-                </h1>
-                <div>
-                  <p>
-                    Conviértete en socio flat latte y ofrece sitios profesionales sin preocuparte del desarrollo.
-                  </p>
-                  <p class="fst-italic">Ideal para: </p>
-                  <div class="services-item p-0" data-aos="fade-up" data-aos-delay="300">
-                    <div class="d-flex">
-                      <i class="bi bi-check fs-5 me-1"></i>
-                      <p class="my-0">Diseñadores gráficos</p>
-                    </div>
-                    <div class="d-flex">
-                      <i class="bi bi-check fs-5 me-1"></i>
-                      <p class="my-0">Fotógrafos</p>
-                    </div>
-                    <div class="d-flex">
-                      <i class="bi bi-check fs-5 me-1"></i>
-                      <p class="my-0">Agencias de marketing</p>
+            <div class="col col-sm-12 col-lg-8">
+              <div class="services-item row align-content-between" data-aos="fade-up" data-aos-delay="300">
+                <div class="col-lg-12">
+                  <h1 class="lh-sm my-2 mb-lg-4" data-aos="fade-up">
+                    ¿Eres freelancer y quieres ofrecer sitios web?
+                  </h1>
+                  <div>
+                    <p>
+                      Conviértete en socio flat latte y ofrece sitios profesionales sin preocuparte del desarrollo.
+                    </p>
+                    <p class="fst-italic">Ideal para: </p>
+                    <div class="services-item p-0" data-aos="fade-up" data-aos-delay="300">
+                      <div class="d-flex">
+                        <i class="bi bi-check fs-5 me-1"></i>
+                        <p class="my-0">Diseñadores gráficos</p>
+                      </div>
+                      <div class="d-flex">
+                        <i class="bi bi-check fs-5 me-1"></i>
+                        <p class="my-0">Fotógrafos</p>
+                      </div>
+                      <div class="d-flex">
+                        <i class="bi bi-check fs-5 me-1"></i>
+                        <p class="my-0">Agencias de marketing</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-12 mt-5">
+                <div class="col-lg-12 my-4 my-md-2">
                   <a class="btn btn-get-started" href="<?php echo esc_url(home_url('/socio')); ?>" target="_blank"  data-aos="fade-up">
                     Conviértete en socio
                   </a>
