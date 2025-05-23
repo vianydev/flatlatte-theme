@@ -42,6 +42,7 @@ Version: 2.1
   --nav-dropdown-color: #212529;
   --nav-dropdown-hover-color: #6b8e8c;
   --whatsapp-green: #5EDB9D;
+  --red-alert: #bd3500;
 }
 
 .light-background {
@@ -585,6 +586,14 @@ section,
   .services .services-item {
     height: auto;
   }
+}
+
+.services .btn-get-started {
+  background-color: transparent;
+}
+
+.services .btn-get-started:hover {
+  background-color: var(--default-color);
 }
 
 
@@ -1654,3 +1663,104 @@ ul.resumen-incluye li::before {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+
+/* Registro Socios */
+#wpmem_reg,
+#wpmem_login,
+.acceso .acceso-box {
+  max-width: 600px !important;;
+  width: 100% !important;
+  margin: 10px;
+  padding: 20px;
+  background: var(--complete-white);
+  border-radius: var(--border-default);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1) !important;
+  animation: fadeIn 0.8s ease-in-out !important;
+}
+
+#wpmem_reg label, 
+#wpmem_login label {
+    font-family: var(--default-font) !important;
+}
+
+#wpmem_reg legend,
+#wpmem_login legend {
+  /* display: none; */
+  font-family: inherit !important;
+  margin: 10px 0 20px 0 !important;
+}
+
+#wpmem_reg fieldset, 
+#wpmem_login fieldset {
+  margin: 0 !important;
+}
+
+#wpmem_reg input[type="text"],
+#wpmem_reg input[type="email"],
+#wpmem_reg input[type="password"],
+#wpmem_reg input[type="submit"],
+#wpmem_login input[type="text"],
+#wpmem_login input[type="email"],
+#wpmem_login input[type="password"], 
+#wpmem_login input[type="submit"] {
+  margin: 10px 0 !important;
+  accent-color: var(--accent-color) !important;
+  padding: 10px 30px 10px 10px !important;
+  border: 2px solid var(--default-color) !important;
+  font-family: var(--default-font) !important;
+  /* border: 2px solid color-mix(in srgb, var(--default-color), transparent 80%); */
+}
+
+.registro input[type="text"]:focus,
+.registro input[type="email"]:focus,
+.registro input[type="password"]:focus,
+.acceso .acceso-box input[type="text"]:focus,
+.acceso .acceso-box input[type="email"]:focus,
+.acceso .acceso-box input[type="password"]:focus, 
+#wpmem_reg input[type="text"]:focus,
+#wpmem_reg input[type="email"]:focus,
+#wpmem_reg input[type="password"]:focus,
+#wpmem_login input[type="text"]:focus,
+#wpmem_login input[type="email"]:focus,
+#wpmem_login input[type="password"]:focus {
+  outline: var(--nav-hover-color) !important;
+  background-color: var(--contrast-color) !important;
+}
+
+#wpmem_login .button_div, 
+#wpmem_reg .button_div {
+  margin: 0 !important;
+  text-align: left !important;
+}
+
+.registro input[type="submit"],
+.acceso .acceso-box .btn-get-started,
+#wpmem_login input[type="submit"],
+#wpmem_reg input[type="submit"] {
+  display: block;
+  margin: 20px 0 !important;
+  background-color: transparent !important;
+  border: 2px solid var(--default-color) !important;
+  text-align: center !important;
+  padding: 10px 30px !important;
+}
+
+.registro input[type="submit"]:hover,
+.acceso .acceso-box .btn-get-started:hover,
+#wpmem_login input[type="submit"]:hover,
+#wpmem_reg input[type="submit"]:hover {
+  background-color: var(--default-color) !important;
+  color: var(--contrast-color) !important;
+}
+
+#wpmem_reg .req-text {
+  font-family: var(--default-font) !important;
+}
+
+#wpmem_reg .link-text,
+#wpmem_login .link-text {
+  font-family: var(--default-font) !important;
+  text-align: left !important;
+}
+

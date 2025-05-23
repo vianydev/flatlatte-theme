@@ -166,7 +166,7 @@ function flatlatte_scripts() {
 	');
 
 
-	wp_enqueue_script( 'flatlatte-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	// wp_enqueue_script( 'flatlatte-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -294,5 +294,104 @@ function save_featured_meta($post_id) {
 }
 add_action('save_post', 'save_featured_meta');
 
-// link tree
+// =============================================  
+// CONTROL DE ACCESO A PANEL DE SOCIOS
+// =============================================  
 
+// Crea el rol si no existe
+add_action('init', function() {
+    if (!get_role('socio')) {
+        add_role('socio', 'Socio', ['read' => true]);
+    }
+});
+
+// Asigna el rol al registrar (forma segura)
+add_action('user_register', function($user_id) {
+    $user = new WP_User($user_id);
+    $user->set_role('socio');
+});
+
+add_action('admin_init', function() {
+    if (current_user_can('socio')) {
+        wp_redirect(home_url()); // Redirige al inicio
+        exit;
+    }
+});
+
+add_filter('user_has_cap', function($allcaps, $caps, $args, $user) {
+    if (in_array('socio', $user->roles)) {
+        // Solo mantiene 'read' y elimina cualquier otra capacidad
+        $allcaps = array_intersect_key($allcaps, ['read' => true]);
+    }
+    return $allcaps;
+}, 10, 4);
+
+// Redirección del logout en el panel de socio
+add_filter( 'wpmem_logout_redirect', 'custom_logout_redirect' );
+function custom_logout_redirect() {
+	// Redirige a /acceso
+	return home_url( '/acceso' ); 
+}
+
+add_action('template_redirect', function() {
+    if (is_page('socios') && !is_user_logged_in()) {
+        wp_redirect(home_url('/acceso'));
+        exit;
+    }
+});
+
+
+add_filter('wpmem_login_redirect', function($redirect_to, $user_id) {
+    return home_url('/socios');
+}, 10, 2);
+
+
+add_filter('wpmem_login_heading', function() {
+    return 'Iniciar Sesión';
+});
+
+// Mensaje cuando el usuario no existe
+add_filter('wpmem_login_failed_username', function() {
+    return 'El usuario no está registrado. ¿Quieres <a href="' . wp_registration_url() . '">crear una cuenta</a>?';
+});
+
+// Mensaje cuando la contraseña es incorrecta
+add_filter('wpmem_login_failed_password', function() {
+    return 'Contraseña incorrecta. <a href="' . wp_lostpassword_url() . '">¿Recuperar contraseña?</a>';
+});
+
+// Mensaje genérico de error
+add_filter('wpmem_login_failed', function() {
+    return 'Usuario o contraseña incorrecta.';
+});
+
+// Traducción de los formularios de acceso de socios
+add_filter('gettext', function($translated, $original, $domain) {
+    if ($domain == 'wp-members') {
+        switch ($original) {
+            case 'Existing Users Log In':
+                return 'Inicio de sesión para socios';
+            case 'Username or Email':
+                return 'Nombre de usuario o Email';
+            case 'Password':
+                return 'Contraseña';
+            case 'Remember Me':
+                return 'Recordar sesión';
+            case 'Log In':
+                return 'Acceder';
+            case 'Forgot password?':
+                return '¿Olvidaste tu contraseña?';
+            case 'New User?':
+                return '¿Aún no eres socio?,';
+            case 'Click here to register':
+                return 'click para resgistrarte.';
+            case 'New User Registration':
+                return 'Registrarse como socio';
+						case 'Register':
+								return 'Registrarse';
+            case 'Required field':
+                return 'Campo requerido';
+        }
+    }
+    return $translated;
+}, 10, 3);

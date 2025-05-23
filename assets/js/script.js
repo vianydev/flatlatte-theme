@@ -103,15 +103,19 @@
    **/
 
   document.addEventListener('DOMContentLoaded', function () {
-  const radios = document.querySelectorAll('input[name="paquete"]');
-  const checkboxes = document.querySelectorAll('.extra');
-  const totalDisplay = document.getElementById('total');
-  const resumen = document.getElementById('resumen');
-  const btnWhatsapp = document.getElementById('btn-whatsapp');
+    if (!window.location.pathname.includes('/precios')) {
+      return; // Salir si no es la página correcta
+    }
 
-  const chatCheckbox = document.querySelector('input[data-label="Chat"]'); 
-  const dominioCheckbox = document.querySelector('input[data-label="Dominio personalizado"]'); 
-  const autoadministrableCheckbox = document.querySelector('input[data-label="Sitio autoadministrable"]'); 
+    const radios = document.querySelectorAll('input[name="paquete"]');
+    const checkboxes = document.querySelectorAll('.extra');
+    const totalDisplay = document.getElementById('total');
+    const resumen = document.getElementById('resumen');
+    const btnWhatsapp = document.getElementById('btn-whatsapp');
+
+    const chatCheckbox = document.querySelector('input[data-label="Chat"]'); 
+    const dominioCheckbox = document.querySelector('input[data-label="Dominio personalizado"]'); 
+    const autoadministrableCheckbox = document.querySelector('input[data-label="Sitio autoadministrable"]'); 
 
   function actualizarOpciones() {
     const basicoSeleccionado = document.querySelector('input[name="paquete"][data-label="Básico"]').checked;
@@ -189,12 +193,6 @@
         mensajeWA += `• Extra: ${c.dataset.label} ($${c.value})\n`;
       }
     });
-
-    // if (basicoSeleccionado) {
-      
-    // }
-
-
 
     resumenHTML += "</ul></li></ul>";
     resumenHTML += `<p class="total-estimado"><strong>Total estimado: $${total.toLocaleString()}</strong></p>`;

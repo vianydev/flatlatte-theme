@@ -294,8 +294,8 @@ get_header();
                   </div>
                 </div>
                 <div class="col-lg-12 my-4 my-md-2">
-                  <a class="btn btn-get-started" href="<?php echo esc_url(home_url('/socio')); ?>" target="_blank"  data-aos="fade-up">
-                    Conviértete en socio
+                  <a class="btn btn-get-started " href="<?php echo esc_url(home_url('/socio')); ?>" target="_blank"  data-aos="fade-up">
+                    Quiero ser socio
                   </a>
                 </div>
               </div>
