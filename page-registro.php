@@ -17,7 +17,7 @@ get_header();
         echo do_shortcode('[wpmem_form register]');
       ?> 
 
-      <a class="" href="<?php echo esc_url(home_url('/acceso')); ?>" data-aos="fade-up" data-aos-delay="100">
+      <a class="text-center mt-5" href="<?php echo esc_url(home_url('/acceso')); ?>" data-aos="fade-up" data-aos-delay="100">
           ¿Ya eres socio?
         </a>
     </div>
